@@ -1,0 +1,26 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@popperjs/core": "^2.11.6",
+        "axios": "^1.1.2",
+        "bootstrap": "^5.2.3",
+        "laravel-vite-plugin": "^0.7.5",
+        "sass": "^1.56.1",
+        "vite": "^4.0.0"
+    },
+    "dependencies": {
+        "animate.css": "^4.1.1",
+        "aos": "^2.3.4",
+        "bootstrap-icons": "^1.10.5",
+        "boxicons": "^2.1.4",
+        "glightbox": "^3.2.0",
+        "isotope": "^1.0.0-alpha.3",
+        "swiper": "^9.3.2",
+        "waypoint": "^0.2.8"
+    }
+}
