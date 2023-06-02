@@ -24,6 +24,11 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+
+Route::get('/dashboard', function () {
+    return view('admin.dashboard');
+})->name('home');
+
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogs');
 Route::get('/potrolio', [PortfolioController::class, 'index'])->name('portfolio');
 Route::get('/about', [AboutController::class, 'index'])->name('about');

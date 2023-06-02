@@ -8,7 +8,7 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>About Us</h2>
+          <h2>About me</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
             <li>About Us</li>
@@ -24,24 +24,31 @@
 
         <div class="row">
           <div class="col-lg-6">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            <img src="{{Vite::asset('resources/img/me.jpg')}}" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+            <h3>Mirjalol M. Rakhmatjonov. Full-stack developer.</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              Hello! My name is Mirjalol, and I am an experienced programmer specializing in web application development using PHP and the Laravel framework. The drive for innovation and creating efficient solutions for complex problems is what inspires me in my work.
             </p>
+
             <ul>
-              <li><i class="bi bi-check2-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check2-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check2-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+              <li><i class="bi bi-check2-circle"></i> Web Application Development.</li>
+              <li><i class="bi bi-check2-circle"></i> API Development</li>
+              <li><i class="bi bi-check2-circle"></i> Admin Panel Development.</li>
+              <li><i class="bi bi-check2-circle"></i> E-commerce Development.</li>
+              <li><i class="bi bi-check2-circle"></i> Blogging and Portfolio Platforms.</li>
+              <li><i class="bi bi-check2-circle"></i> Integration of Third-Party Services.</li>
             </ul>
+
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
+              With over 3 years of experience in software development, I have become an expert in building high-quality web applications. My professional journey has led me to work on various projects, ranging from small websites to complex scalable applications.
+              During my work, I often utilize Laravel as it provides powerful tools and facilitates the development process. I am confident in my skills in PHP, MySQL, HTML, CSS, and JavaScript, and I always strive to leverage cutting-edge technologies and best practices in my work.
             </p>
+
+            
+            
+
           </div>
         </div>
 
@@ -49,7 +56,7 @@
     </section><!-- End About Section -->
 
     <!-- ======= Facts Section ======= -->
-    <section class="facts section-bg" data-aos="fade-up">
+    {{-- <section class="facts section-bg" data-aos="fade-up">
       <div class="container">
 
         <div class="row counters">
@@ -77,15 +84,16 @@
         </div>
 
       </div>
-    </section><!-- End Facts Section -->
+    </section>
+    <!-- End Facts Section --> --}}
 
     <!-- ======= Our Skills Section ======= -->
     <section class="skills" data-aos="fade-up">
       <div class="container">
 
         <div class="section-title">
-          <h2>Our Skills</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Skills</h2>
+          {{-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> --}}
         </div>
 
         <div class="skills-content">
@@ -93,6 +101,12 @@
           <div class="progress">
             <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
               <span class="skill">HTML <i class="val">100%</i></span>
+            </div>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">PHP <i class="val">100%</i></span>
             </div>
           </div>
 
@@ -108,11 +122,7 @@
             </div>
           </div>
 
-          <div class="progress">
-            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">Photoshop <i class="val">55%</i></span>
-            </div>
-          </div>
+          
 
         </div>
 
@@ -120,7 +130,7 @@
     </section><!-- End Our Skills Section -->
 
     <!-- ======= Tetstimonials Section ======= -->
-    <section class="testimonials" data-aos="fade-up">
+    {{-- <section class="testimonials" data-aos="fade-up">
       <div class="container">
 
         <div class="section-title">
@@ -189,7 +199,8 @@
         </div>
 
       </div>
-    </section><!-- End Ttstimonials Section -->
+    </section> --}}
+    <!-- End Ttstimonials Section -->
 
   </main><!-- End #main -->
 
