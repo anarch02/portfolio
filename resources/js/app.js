@@ -7,3 +7,8 @@ import '../../node_modules/swiper/swiper-bundle.min.js';
 import './noframework.waypoints';
 
 import './main';
+
+
+import.meta.glob([
+    '../img/**/*'
+]);
