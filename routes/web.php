@@ -27,14 +27,15 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
-})->name('home');
+})->name('dashboard');
 
-Route::get('/blogs', [BlogController::class, 'index'])->name('blogs');
+Route::get('/blog', [BlogController::class, 'index'])->name('blogs');
 Route::get('/potrolio', [PortfolioController::class, 'index'])->name('portfolio');
+Route::get('/potrolio/{id}/details', [PortfolioController::class, 'details'])->name('portfolio.details');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::get('/services', [ServiceController::class, 'index'])->name('services');
-Route::get('/article', [ArticleController::class, 'index'])->name('article');
+Route::get('/article/{id}', [ArticleController::class, 'index'])->name('article');
 
 
 Auth::routes();

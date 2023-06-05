@@ -17,6 +17,30 @@ return new class extends Migration
             $table->string('name');
             $table->timestamps();
         });
+
+        Schema::create('tags_article', function (Blueprint $table) {
+            $table->id();
+            $table->foreignIdFor(\App\Models\Tag::class)
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
+            $table->foreignIdFor(\App\Models\Article::class)
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
+        });
+
+        Schema::create('tags_project', function (Blueprint $table) {
+            $table->id();
+            $table->foreignIdFor(\App\Models\Tag::class)
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
+            $table->foreignIdFor(\App\Models\Project::class)
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
+        });
     }
 
     /**
