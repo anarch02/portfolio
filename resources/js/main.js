@@ -1,4 +1,8 @@
-import AOS from "aos";
+// import glightbox from "glightbox";
+import Swiper from 'swiper';
+import GLightbox from 'glightbox';
+import AOS from 'aos';
+// import PureCounter from './purecounter_vanilla.js';
 
 /**
 * Template Name: Moderna - v4.11.0
