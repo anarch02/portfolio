@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Project extends Model
@@ -40,5 +41,15 @@ class Project extends Model
     public function tags(): BelongsToMany
     {
         return $this->belongsToMany(Tag::class, 'tags_project', 'project_id', 'tag_id');
+    }
+
+    /**
+     * Get the category that owns the Project
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(Category::class);
     }
 }

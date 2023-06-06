@@ -20,6 +20,7 @@
         "boxicons": "^2.1.4",
         "glightbox": "^3.2.0",
         "isotope": "^1.0.0-alpha.3",
+        "jquery": "^3.7.0",
         "swiper": "^9.3.2",
         "typed.js": "^2.0.16",
         "waypoint": "^0.2.8"

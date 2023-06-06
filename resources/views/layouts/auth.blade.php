@@ -13,6 +13,11 @@
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
+    
+      <!-- Favicons -->
+      <link href="{{Vite::asset('resources/img/favicon.png')}}" rel="icon">
+      <link href="{{Vite::asset('resources/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>

@@ -25,9 +25,7 @@ Route::get('/', function () {
 })->name('home');
 
 
-Route::get('/dashboard', function () {
-    return view('admin.dashboard');
-})->name('dashboard');
+
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blogs');
 Route::get('/potrolio', [PortfolioController::class, 'index'])->name('portfolio');
@@ -40,4 +38,8 @@ Route::get('/article/{id}', [ArticleController::class, 'index'])->name('article'
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+    Route::resource('projects', \App\Http\Controllers\Admin\ProjectController::class);
+});
+
