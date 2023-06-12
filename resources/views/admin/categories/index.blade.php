@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h2>Projects list <x-create></x-create></h2>
+<h2>Projects list <a href="#" class="bi bi-plus"></a></h2>
 
 {{-- @dump($myProperty) --}}
 

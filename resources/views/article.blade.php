@@ -4,21 +4,8 @@
 <main id="main">
 
     <!-- ======= Blog Section ======= -->
-    <section class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Blog</h2>
-
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li>Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia reiciendis</li>
-          </ol>
-        </div>
-
-      </div>
-    </section><!-- End Blog Section -->
+    <x-breadcrumb></x-breadcrumb>
+    <!-- End Blog Section -->
 
     <!-- ======= Blog Single Section ======= -->
     <section id="blog" class="blog">

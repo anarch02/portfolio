@@ -4,19 +4,8 @@
 <main id="main">
 
     <!-- ======= About Us Section ======= -->
-    <section class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>About me</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>About Us</li>
-          </ol>
-        </div>
-
-      </div>
-    </section><!-- End About Us Section -->
+    <x-breadcrumb></x-breadcrumb>
+    <!-- End About Us Section -->
 
     <!-- ======= About Section ======= -->
     <section class="about" data-aos="fade-up">
@@ -27,23 +16,19 @@
             <img src="{{Vite::asset('resources/img/me.jpg')}}" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
-            <h3>Mirjalol M. Rakhmatjonov. Full-stack developer.</h3>
+            <h3> {{__('about.title')}} </h3>
             <p class="fst-italic">
-              Hello! My name is Mirjalol, and I am an experienced programmer specializing in web application development using PHP and the Laravel framework. The drive for innovation and creating efficient solutions for complex problems is what inspires me in my work.
+              {{__('about.prev')}}
             </p>
 
             <ul>
-              <li><i class="bi bi-check2-circle"></i> Web Application Development.</li>
-              <li><i class="bi bi-check2-circle"></i> API Development</li>
-              <li><i class="bi bi-check2-circle"></i> Admin Panel Development.</li>
-              <li><i class="bi bi-check2-circle"></i> E-commerce Development.</li>
-              <li><i class="bi bi-check2-circle"></i> Blogging and Portfolio Platforms.</li>
-              <li><i class="bi bi-check2-circle"></i> Integration of Third-Party Services.</li>
+              @foreach (__('about.items') as $item)
+              <li><i class="bi bi-check2-circle"></i> {{$item}}</li>
+              @endforeach
             </ul>
 
             <p>
-              With over 3 years of experience in software development, I have become an expert in building high-quality web applications. My professional journey has led me to work on various projects, ranging from small websites to complex scalable applications.
-              During my work, I often utilize Laravel as it provides powerful tools and facilitates the development process. I am confident in my skills in PHP, MySQL, HTML, CSS, and JavaScript, and I always strive to leverage cutting-edge technologies and best practices in my work.
+              {{__('about.decription')}}
             </p>
 
             
@@ -55,44 +40,14 @@
       </div>
     </section><!-- End About Section -->
 
-    <!-- ======= Facts Section ======= -->
-    {{-- <section class="facts section-bg" data-aos="fade-up">
-      <div class="container">
-
-        <div class="row counters">
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Clients</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Projects</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Hours Of Support</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Hard Workers</p>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-    <!-- End Facts Section --> --}}
+    
 
     <!-- ======= Our Skills Section ======= -->
     <section class="skills" data-aos="fade-up">
       <div class="container">
 
         <div class="section-title">
-          <h2>Skills</h2>
+          <h2>{{__('about.skills')}}</h2>
           {{-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> --}}
         </div>
 

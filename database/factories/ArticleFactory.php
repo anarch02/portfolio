@@ -18,6 +18,7 @@ class ArticleFactory extends Factory
     {
         return [
             'title'=> fake()->title(),
+            'category_id' => rand(1, 5),
             'preview' => fake()->text(20),
             'image' => fake()->imageUrl(1024,768),
             'description' => fake()->text(100),

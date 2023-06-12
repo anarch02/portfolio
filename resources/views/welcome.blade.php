@@ -1,13 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+
      <!-- ======= Hero No Slider Section ======= -->
   <section id="hero-no-slider" class="d-flex justify-cntent-center align-items-center">
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
       <div class="row justify-content-center">
         <div class="col-xl-8">
-          <h2>Full-stack developer</h2>
-          <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+          <h2>{{__('hero.title')}}</h2>
+          <p>{{__('hero.prev')}}</p>
           <a href="" class="btn-get-started ">Read More</a>
         </div>
       </div>
@@ -17,46 +18,8 @@
   <main id="main">
 
     <!-- ======= Services Section ======= -->
-    <section class="services">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
-            <div class="icon-box icon-box-pink">
-              <div class="icon"><i class='bx bx-devices'></i></div>
-              <h4 class="title"><a href="">Web Application Development</a></h4>
-              <p class="description">Building dynamic and interactive web applications tailored to specific business needs, providing functionality such as user registration, data management, content delivery, and integration with external services.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon-box icon-box-cyan">
-              <div class="icon"><i class="bx bx-basket"></i></div>
-              <h4 class="title"><a href="">E-commerce Solutions</a></h4>
-              <p class="description">Developing fully functional and secure online stores with features such as product catalog, shopping cart, secure payment processing, order management, and inventory tracking.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon-box icon-box-green">
-              <div class="icon"><i class="bx bx-window"></i></div>
-              <h4 class="title"><a href="">CRM Systems</a></h4>
-              <p class="description">Creating custom CRM systems to help businesses manage customer interactions, track leads and sales, automate processes, and enhance customer relationship management.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon-box icon-box-blue">
-              <div class="icon"><i class="bx bx-sitemap"></i></div>
-              <h4 class="title"><a href="">Content Management Systems</a></h4>
-              <p class="description">Developing content management systems (CMS) for creating, managing, and publishing content on websites. CMS allows easy addition, editing, and deletion of content such as text, images, videos, and also allows managing the structure and layout of the site.</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
+    <x-services></x-services>
+    <!-- End Services Section -->
 
 
     <!-- ======= Features Section ======= -->

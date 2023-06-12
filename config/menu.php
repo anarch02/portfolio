@@ -2,27 +2,27 @@
 
 return[
     [
-        'title' => 'Home',
+        'title' => 'home',
         'route' => 'home',
     ],
     [
-        'title' => 'About me',
+        'title' => 'about',
         'route' => 'about',
     ],
     [
-        'title' => 'Services',
+        'title' => 'services',
         'route' => 'services',
     ],
     [
-        'title' => 'Portfolio',
+        'title' => 'portfolio',
         'route' => 'portfolio',
     ],
     [
-        'title' => 'Blog',
-        'route' => 'blogs',
+        'title' => 'blog',
+        'route' => 'blog',
     ],
     [
-        'title' => 'Contact',
+        'title' => 'contact',
         'route' => 'contact',
     ],
 ];

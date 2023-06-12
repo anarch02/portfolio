@@ -11,8 +11,14 @@
       <nav id="navbar" class="navbar">
         <ul>
           @foreach($menu as $item)
-          <li><a @if($item['active']) class="active " @endif  href="{{route($item['route'])}}">{{$item['title']}}</a></li>
+          <li><a @if($item['active']) class="active " @endif  href="{{route($item['route'])}}">{{__('app.' . $item['title']) }}</a></li>
           @endforeach
+          <li class="dropdown"><a href="#"><span> {{__('app.lang')}} </span> <i class="bi bi-chevron-right"></i></a>
+            <ul>
+              <li><a href="{{route('lang', 'en')}}">English</a></li>
+              <li><a href="{{route('lang', 'ru')}}">Русский</a></li>
+            </ul>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

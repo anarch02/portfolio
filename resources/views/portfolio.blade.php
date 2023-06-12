@@ -6,19 +6,8 @@
   <main id="main">
 
     <!-- ======= Our Portfolio Section ======= -->
-    <section class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Our Portfolio</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Our Portfolio</li>
-          </ol>
-        </div>
-
-      </div>
-    </section><!-- End Our Portfolio Section -->
+    <x-breadcrumb></x-breadcrumb>
+    <!-- End Our Portfolio Section -->
 
     <!-- ======= Portfolio Section ======= -->
     <section class="portfolio">

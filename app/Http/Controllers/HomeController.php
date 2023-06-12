@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    public $info = 'heelleo dssdh';
     /**
      * Create a new controller instance.
      *
