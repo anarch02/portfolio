@@ -9,7 +9,7 @@
         <div class="col-xl-8">
           <h2>{{__('hero.title')}}</h2>
           <p>{{__('hero.prev')}}</p>
-          <a href="" class="btn-get-started ">Read More</a>
+          <a href="" class="btn-get-started ">{{__('app.more')}}</a>
         </div>
       </div>
     </div>
@@ -27,8 +27,8 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Features</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>{{__('hero.features')}}</h2>
+          <p>{{__('hero.features_desc')}}</p>
         </div>
 
         <div class="row" data-aos="fade-up">
@@ -36,13 +36,14 @@
             <img src="{{Vite::asset('resources/img/features-4.svg')}}" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 pt-4">
-            <h3> Planning.</h3>
+            <h3>{{__('hero.planning')}}</h3>
             <p>
-              During this stage, we define the project goals, discuss requirements, and outline the key functionalities. We also develop an action plan, create a schedule, and identify the resources needed to execute the project.
+              {{__('hero.plannig_desc')}}
             </p>
             <ul>
-              <li><i class="bi bi-check"></i> Project charter: provides a general overview of the project. It describes the project’s reasons, goals, objectives, and constraints, among other aspects.</li>
-              <li><i class="bi bi-check"></i> Statement of Work: A statement of work defines the project’s scope, schedule, deliverables, milestones, and tasks.</li>
+              @foreach (__('hero.planning_items') as $item)
+              <li><i class="bi bi-check"></i> {{$item}}</li>
+              @endforeach
             </ul>
           </div>
         </div>
@@ -52,9 +53,9 @@
             <img src="{{Vite::asset('resources/img/features-1.svg')}}" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 pt-5 order-2 order-md-1">
-            <h3>Development.</h3>
+            <h3>{{__('hero.development')}}</h3>
             <p>
-              In this stage, we create and build the project. In the case of Laravel web development, we write code, design databases, create the user interface, and implement the required features. All development is done to adhere to the specified project requirements and specifications.
+              {{__('hero.development_desc')}}
             </p>
           </div>
         </div>
@@ -64,12 +65,12 @@
             <img src="{{Vite::asset('resources/img/features-2.svg')}}" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 pt-5">
-            <h3>Testing.</h3>
-            <p>The testing stage is crucial to ensure the quality and functionality of the project. We perform various types of testing, including unit testing, integration testing, and system testing, to verify that all functions work correctly and meet expectations.</p>
+            <h3> {{__('hero.testing')}}</h3>
+            <p>{{__('hero.testing_desc')}}</p>
             <ul>
-              <li><i class="bi bi-check"></i> Unit Testing.</li>
-              <li><i class="bi bi-check"></i> Integration Testing.</li>
-              <li><i class="bi bi-check"></i> System Testing.</li>
+              @foreach (__('hero.testing_items') as $item)
+              <li><i class="bi bi-check"></i> {{$item}}</li>
+              @endforeach
             </ul>
           </div>
         </div>
@@ -79,13 +80,13 @@
             <img src="{{Vite::asset('resources/img/features-3.svg')}}" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 pt-5 order-2 order-md-1">
-            <h3>Deployment</h3>
+            <h3>{{__('hero.deployment')}}</h3>
             {{-- <p class="fst-italic">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
               magna aliqua.
             </p> --}}
             <p>
-              The final stage of the project is deployment. Here, we deploy the finalized project to hosting or a server, making it accessible to the public. It is important to ensure that all settings, configurations, and site security are properly configured. Once successfully deployed, the project is ready for use and publication.
+              {{__('hero.deployment_desc')}}
             </p>
           </div>
         </div>

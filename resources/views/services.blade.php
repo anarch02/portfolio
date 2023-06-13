@@ -11,7 +11,7 @@
     <x-services></x-services>
     <!-- End Services Section -->
 
-    <!-- ======= Why Us Section ======= -->
+    {{-- <!-- ======= Why Us Section ======= -->
     <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
       <div class="container">
 
@@ -153,7 +153,7 @@
         </div>
 
       </div>
-    </section><!-- End Pricing Section -->
+    </section><!-- End Pricing Section --> --}}
 
   </main><!-- End #main -->
 @endsection

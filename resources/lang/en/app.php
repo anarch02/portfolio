@@ -16,5 +16,6 @@
         'my_sevrices' => 'My Services',
         'links' => 'Useful Links',
 
-        // welcome page
+        // buttons
+        'more' => 'Read More',
     ];
