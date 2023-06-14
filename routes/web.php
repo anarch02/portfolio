@@ -35,6 +35,8 @@ Route::prefix('admin')->group(function () {
 
     Route::middleware(['auth'])->group(function () {
         Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+        Route::get('/messages', [App\Http\Controllers\HomeController::class, 'messages'])->name('messages');
+
         Route::resource('categories', \App\Http\Controllers\Admin\CategoryController::class);
         Route::resource('articles', \App\Http\Controllers\Admin\ArticleController::class);
         Route::resource('projects', \App\Http\Controllers\Admin\ProjectController::class);
@@ -60,6 +62,8 @@ Route::middleware(['set_locale'])->group(function () {
     Route::get('/contact', [ContactController::class, 'index'])->name('contact');
     Route::get('/services', [ServiceController::class, 'index'])->name('services');
     Route::get('/article/{id}', [ArticleController::class, 'index'])->name('article');
+
+    Route::post('/send_message', [ContactController::class, 'sendMessage'])->name('send_message');
 });
 
 

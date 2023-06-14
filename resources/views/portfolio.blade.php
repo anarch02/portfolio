@@ -23,7 +23,8 @@
             </ul>
           </div>
         </div>
-
+        
+        @if ($projects)
         <div class="row portfolio-container" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
 
           @foreach ($projects as $project)
@@ -44,6 +45,10 @@
           @endforeach
           
         </div>
+        @else
+            {{__('app.null_message')}}
+        @endif
+        
 
       </div>
     </section><!-- End Portfolio Section -->

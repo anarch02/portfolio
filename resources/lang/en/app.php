@@ -18,4 +18,6 @@
 
         // buttons
         'more' => 'Read More',
+
+        'null_message' => 'No Data Found'
     ];

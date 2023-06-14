@@ -12,6 +12,7 @@
     <section id="blog" class="blog">
       <div class="container" data-aos="fade-up">
 
+        @if ($articles && $tags)
         <div class="row">
 
           <div class="col-lg-8 entries">
@@ -63,6 +64,10 @@
 
           <x-sidebar></x-sidebar>
         </div>
+        @else
+            {{__('app.null_message')}}
+        @endif
+        
 
       </div>
     </section><!-- End Blog Section -->
