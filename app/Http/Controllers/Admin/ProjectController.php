@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\ProjectRequest;
+use App\Models\Project;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -19,48 +21,37 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = \App\Models\Project::all();
+        $projects = Project::all();
         return view('admin.projects.index', compact('projects'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ProjectRequest $request)
     {
-        //
+        Project::create($request->validated());
+
+        return response()->json();
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
     {
-        //
+        return response()->json(Project::find($id));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(ProjectRequest $request, string $id)
     {
-        //
+        Project::find($id)->update($request->validated());
+
+        return response()->json();
     }
 
     /**
@@ -68,6 +59,7 @@ class ProjectController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Project::find($id)->delete();
+        return response()->json();
     }
 }
