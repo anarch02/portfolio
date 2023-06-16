@@ -17,10 +17,10 @@ return[
         'title' => 'portfolio',
         'route' => 'portfolio',
     ],
-    [
-        'title' => 'blog',
-        'route' => 'blog',
-    ],
+    // [
+    //     'title' => 'blog',
+    //     'route' => 'blog',
+    // ],
     [
         'title' => 'contact',
         'route' => 'contact',

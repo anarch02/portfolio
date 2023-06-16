@@ -6,23 +6,55 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\ProjectRequest;
 use App\Models\Project;
 use Illuminate\Http\Request;
+use League\CommonMark\Extension\Table\TableRow;
 
 class ProjectController extends Controller
 {
-    protected $myProperty;
+    protected $page_info =
+    [
+        'form' =>
+        [
 
-    public function __construct()
-    {
-        $this->myProperty = 'Some value';
-    }
+            'inputs' => [
+                'name'=>
+                [
+                    'type' => 'text',
+                    'label' => 'Project Name',
+
+                ],
+                'url' => 
+                [
+                    'type' => 'text',
+                    'label' => 'Project URL',
+                ],
+                'description' => 
+                [
+                    'type' => 'text',
+                    'label' => 'Project Description',
+                ]
+            ],
+        ],
+        'table' =>
+        [
+            'thead' => ['Name', 'URL'],
+            'tbody' => ['name', 'url'],
+        ],
+        'create_route' =>'projects.store',
+
+        'edit_route' =>'projects.update',
+    ];
+
+    
     
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $projects = Project::all();
-        return view('admin.projects.index', compact('projects'));
+        $objects = Project::all();
+        $page_info = $this->page_info;
+
+        return view('admin.projects.index', compact('page_info', 'objects'));
     }
 
     /**
