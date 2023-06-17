@@ -6,7 +6,7 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-3 col-md-6 footer-links">
+          {{-- <div class="col-lg-3 col-md-6 footer-links">
             <h4>{{__('app.links')}}</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
@@ -45,7 +45,7 @@
               <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
               <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
-          </div>
+          </div> --}}
 
         </div>
       </div>
