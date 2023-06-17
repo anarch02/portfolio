@@ -27,14 +27,14 @@
                 <div class="info-box">
                   <i class="bx bx-envelope"></i>
                   <h3>Email</h3>
-                  <p>info@example.com<br>contact@example.com</p>
+                  <p>mrjianarchist@gmail.com</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box">
                   <i class="bx bx-phone-call"></i>
                   <h3>{{__('contact.call')}}</h3>
-                  <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+                  <p>+998 (90) 811-46-84</p>
                 </div>
               </div>
             </div>
