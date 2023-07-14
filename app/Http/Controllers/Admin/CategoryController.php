@@ -19,6 +19,11 @@ class CategoryController extends Controller
         ]);
     }
 
+    public function create()
+    {
+        return view('admin.categories.action');
+    }
+
     /**
      * Store a newly created resource in storage.
      */
@@ -26,7 +31,7 @@ class CategoryController extends Controller
     {
         Category::create($request->validated());
 
-        return response()->json();
+        return redirect(route('categories.index'))->with('success', 'Category created');
     }
 
     /**
@@ -34,7 +39,9 @@ class CategoryController extends Controller
      */
     public function edit(string $id)
     {
-        return response()->json(Category::findOrFail($id));
+        $category = Category::findOrFail($id);
+
+        return view('admin.categories.action', compact('category'));
     }
 
     /**
@@ -44,7 +51,7 @@ class CategoryController extends Controller
     {
         Category::findOrFail($id)->update($request->validated());
 
-        return response()->json();
+        return redirect(route('categories.index'))->with('success', 'Category updated');
     }
 
     /**

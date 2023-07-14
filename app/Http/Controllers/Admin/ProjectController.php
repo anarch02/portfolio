@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\ProjectRequest;
 use App\Models\Project;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use League\CommonMark\Extension\Table\TableRow;
 
@@ -57,6 +58,13 @@ class ProjectController extends Controller
         return view('admin.projects.index', compact('page_info', 'objects'));
     }
 
+    public function create()
+    {
+        $tags = Tag::orderby('name')->pluck('name', 'id');
+
+        return view('admin.projects.action', compact('tags'));
+    }
+
     /**
      * Store a newly created resource in storage.
      */
@@ -73,7 +81,11 @@ class ProjectController extends Controller
      */
     public function edit(string $id)
     {
-        return response()->json(Project::find($id));
+        // return response()->json(Project::find($id));
+        $tags = Tag::orderby('name')->pluck('name', 'id');
+        $project = Project::find($id);
+
+        return view('admin.projects.action', compact('tags', 'project'));
     }
 
     /**

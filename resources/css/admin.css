@@ -1,4 +1,9 @@
 @import '../../node_modules/bootstrap-icons/font/bootstrap-icons.css';
+@import '../../node_modules/slim-select/dist/slimselect.css';
+
+*{
+  /* font-size: 18px; */
+}
 
 .bd-placeholder-img {
     font-size: 1.125rem;
@@ -8,9 +13,25 @@
     user-select: none;
   }
 
+header{
+  background-color: #2470dc;
+}
+
+main{
+  background-color: #dadada;
+}
+
+.navbar-search {
+  display: block;
+}
+
   @media (min-width: 768px) {
     .bd-placeholder-img-lg {
       font-size: 3.5rem;
+    }
+
+    .sidebar {
+      height: 100vh;
     }
   }
 

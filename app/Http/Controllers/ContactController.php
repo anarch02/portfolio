@@ -21,7 +21,7 @@ class ContactController extends Controller
             'message' => 'required'
             ]);
         Message::create($data);
-        return redirect()->back()->with('success', 'Message sent successfully');
+        return redirect()->back()->with('success', 'Message send successfully');
 
     }
 }
